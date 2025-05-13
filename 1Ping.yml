@@ -1,7 +1,7 @@
 ---
 - name: Ping
-  hosts: all
-  gather_facts: true
+  hosts: windows
+  gather_facts: false
 
   tasks:
   - name: Pinging to test node
