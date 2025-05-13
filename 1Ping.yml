@@ -1,0 +1,15 @@
+---
+- name: Ping
+  hosts: all
+  gather_facts: true
+
+  tasks:
+  - name: Pinging to test node
+    win_ping:
+    
+  - name: Run disable screen saver script
+    win_shell: |
+      powershell.exe "powercfg -change -monitor-timeout-ac 0"
+      powershell.exe "powercfg -change -monitor-timeout-dc 0"
+    
+  
